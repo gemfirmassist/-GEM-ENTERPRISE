@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Power of Attorney Services - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-gavel me-3"></i>Power of Attorney Services</h1>
+                <p class="lead">Professional legal documentation and trust services</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="content-card">
+                    <h2>Legal & Trust Services</h2>
+                    <p class="lead">Comprehensive power of attorney, trust management, and legal documentation services to protect your assets and interests.</p>
+                    
+                    <h3 class="mt-5">Power of Attorney Types</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="legal-service-card">
+                                <i class="fas fa-handshake text-primary fa-2x mb-3"></i>
+                                <h4>General Power of Attorney</h4>
+                                <p>Broad authority to act on your behalf in financial and legal matters.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="legal-service-card">
+                                <i class="fas fa-heart text-danger fa-2x mb-3"></i>
+                                <h4>Healthcare Power of Attorney</h4>
+                                <p>Medical decision-making authority for healthcare and treatment decisions.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="legal-service-card">
+                                <i class="fas fa-dollar-sign text-success fa-2x mb-3"></i>
+                                <h4>Financial Power of Attorney</h4>
+                                <p>Specific authority for financial transactions and asset management.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="legal-service-card">
+                                <i class="fas fa-clock text-warning fa-2x mb-3"></i>
+                                <h4>Durable Power of Attorney</h4>
+                                <p>Remains effective even if you become incapacitated or unable to make decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-5">Trust Management Services</h3>
+                    <div class="trust-services">
+                        <div class="trust-service-item">
+                            <i class="fas fa-shield-alt text-info me-3"></i>
+                            <div>
+                                <h5>Asset Protection Trusts</h5>
+                                <p>Protect your assets from creditors and legal challenges while maintaining beneficial ownership.</p>
+                            </div>
+                        </div>
+                        <div class="trust-service-item">
+                            <i class="fas fa-family text-success me-3"></i>
+                            <div>
+                                <h5>Family Trusts</h5>
+                                <p>Estate planning and wealth transfer strategies for family asset management.</p>
+                            </div>
+                        </div>
+                        <div class="trust-service-item">
+                            <i class="fas fa-building text-primary me-3"></i>
+                            <div>
+                                <h5>Business Trusts</h5>
+                                <p>Corporate structuring and business asset protection through trust arrangements.</p>
+                            </div>
+                        </div>
+                        <div class="trust-service-item">
+                            <i class="fas fa-home text-warning me-3"></i>
+                            <div>
+                                <h5>Real Estate Trusts</h5>
+                                <p>Property holding and management through specialized real estate trust structures.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-5">Legal Process</h3>
+                    <div class="process-steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Consultation</h5>
+                                <p>Initial consultation to understand your needs and objectives.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Documentation</h5>
+                                <p>Professional preparation of all legal documents and agreements.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Execution</h5>
+                                <p>Proper execution and notarization of all legal instruments.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h5>Management</h5>
+                                <p>Ongoing trust administration and legal compliance monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info mt-5">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Important:</strong> All legal services are provided in partnership with qualified attorneys and are subject to applicable state and federal regulations.
+                    </div>
+                    
+                    <div class="cta-section mt-5 text-center">
+                        <h4>Need Legal Documentation?</h4>
+                        <p>Contact our legal team to discuss your power of attorney and trust service needs.</p>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-gavel me-2"></i>Legal Consultation
+                        </a>
+                        <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-list me-2"></i>All Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

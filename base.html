@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gem Assist Enterprise - Professional Security & Trust Services{% endblock %}</title>
+    
+    <!-- Google Fonts - Inter for professional typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
+                <i class="fas fa-shield-alt me-2"></i>
+                <strong>GEM ENTERPRISE</strong>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">
+                            <i class="fas fa-info-circle me-1"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-cogs me-1"></i>Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="{{ url_for('services') }}">
+                                <i class="fas fa-list me-2"></i>All Services
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('telegram_bot') }}">
+                                <i class="fab fa-telegram me-2"></i>Telegram Bot Automation
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('power_of_attorney') }}">
+                                <i class="fas fa-gavel me-2"></i>Power of Attorney
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('monitoring') }}">
+                                <i class="fas fa-eye me-2"></i>Threat Monitoring
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('investment_portfolio') }}">
+                                <i class="fas fa-chart-line me-2"></i>Investment Portfolio
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-users me-1"></i>Community
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="{{ url_for('testimonials') }}">
+                                <i class="fas fa-star me-2"></i>Testimonials
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('partners') }}">
+                                <i class="fas fa-handshake me-2"></i>Partners & Trustees
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('teams') }}">
+                                <i class="fas fa-crown me-2"></i>Leadership & Teams
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('news') }}">
+                                <i class="fas fa-newspaper me-2"></i>News & Newsletter
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">
+                            <i class="fas fa-envelope me-1"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle me-1"></i>Access
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="{{ url_for('client_access') }}">
+                                <i class="fas fa-user me-2"></i>Client Portal
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('admin_panel') }}">
+                                <i class="fas fa-cog me-2"></i>Admin Panel
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-shield-alt me-2"></i>GEM Enterprise</h5>
+                    <p class="text-muted">Professional Security & Trust Services providing comprehensive digital threat monitoring, asset recovery, real estate services, and cybersecurity solutions.</p>
+                    <div class="verification-badges">
+                        <span class="badge bg-success me-2">
+                            <i class="fas fa-check-circle me-1"></i>Verified Secure
+                        </span>
+                        <span class="badge bg-primary">
+                            <i class="fas fa-star me-1"></i>Trusted Partner
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 mb-4">
+                    <h6>Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('services') }}" class="text-muted">All Services</a></li>
+                        <li><a href="{{ url_for('telegram_bot') }}" class="text-muted">Telegram Bot</a></li>
+                        <li><a href="{{ url_for('monitoring') }}" class="text-muted">Threat Monitoring</a></li>
+                        <li><a href="{{ url_for('investment_portfolio') }}" class="text-muted">Investments</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 mb-4">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('about') }}" class="text-muted">About Us</a></li>
+                        <li><a href="{{ url_for('teams') }}" class="text-muted">Our Team</a></li>
+                        <li><a href="{{ url_for('partners') }}" class="text-muted">Partners</a></li>
+                        <li><a href="{{ url_for('news') }}" class="text-muted">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 mb-4">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('contact') }}" class="text-muted">Contact</a></li>
+                        <li><a href="{{ url_for('client_access') }}" class="text-muted">Client Portal</a></li>
+                        <li><a href="{{ url_for('testimonials') }}" class="text-muted">Testimonials</a></li>
+                        <li><a href="{{ url_for('power_of_attorney') }}" class="text-muted">Legal Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 mb-4">
+                    <h6>Connect</h6>
+                    <div class="contact-info mb-3">
+                        <p class="text-muted mb-1">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+18603054376" class="text-muted">+1 (860) 305-4376</a>
+                        </p>
+                        <p class="text-muted mb-1">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:Admin@gemcybersecurityassist.com" class="text-muted">Admin@gemcybersecurityassist.com</a>
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="text-muted me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="fab fa-telegram fa-lg"></i></a>
+                        <a href="mailto:support@gemcybersecurityassist.com" class="text-muted"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2025 GEM Cybersecurity & Monitoring Assist + Alliance Trust Realty LLC. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small class="text-muted">
+                        <i class="fas fa-lock me-1"></i>Secure • 
+                        <i class="fas fa-certificate me-1"></i>Certified • 
+                        <i class="fas fa-shield-check me-1"></i>Protected
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Professional Live Chat Support -->
+    <div id="liveChatButton" class="live-chat-button">
+        <div class="chat-button-content">
+            <i class="fas fa-comments"></i>
+            <span class="chat-text">Live Support</span>
+            <div class="status-indicator online"></div>
+        </div>
+        <div class="chat-tooltip">
+            <div class="chat-agents">
+                <div class="agent-status">
+                    <i class="fas fa-user-shield text-primary"></i>
+                    <span>Security Team: <strong class="text-success">Online</strong></span>
+                </div>
+                <div class="agent-status">
+                    <i class="fas fa-user-tie text-info"></i>
+                    <span>Real Estate: <strong class="text-success">Online</strong></span>
+                </div>
+                <div class="agent-status">
+                    <i class="fas fa-user-cog text-warning"></i>
+                    <span>Technical Support: <strong class="text-success">Online</strong></span>
+                </div>
+            </div>
+            <small class="text-muted">Average response time: <strong>2 minutes</strong></small>
+        </div>
+    </div>
+
+    <!-- Live Chat Modal -->
+    <div class="modal fade" id="liveChatModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shield-alt text-primary me-2"></i>
+                        GEM Enterprise Live Support
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="chat-options">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="support-department">
+                                    <i class="fas fa-shield-alt fa-2x text-primary mb-2"></i>
+                                    <h6>Cybersecurity</h6>
+                                    <p class="small text-muted">Threat monitoring, incident response, security audits</p>
+                                    <a href="mailto:Analyzer@gemcybersecurityassist.com" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-envelope me-1"></i>Connect Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="support-department">
+                                    <i class="fas fa-home fa-2x text-success mb-2"></i>
+                                    <h6>Real Estate</h6>
+                                    <p class="small text-muted">Property investment, portfolio management, asset recovery</p>
+                                    <a href="mailto:support@alliancetrustrealty.com" class="btn btn-success btn-sm">
+                                        <i class="fas fa-envelope me-1"></i>Connect Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="support-department">
+                                    <i class="fas fa-headset fa-2x text-info mb-2"></i>
+                                    <h6>General Support</h6>
+                                    <p class="small text-muted">Account access, billing, general inquiries</p>
+                                    <a href="mailto:support@gemcybersecurityassist.com" class="btn btn-info btn-sm">
+                                        <i class="fas fa-envelope me-1"></i>Connect Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emergency-contact mt-4 p-3 bg-danger bg-opacity-10 border border-danger rounded">
+                        <h6 class="text-danger">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Emergency Security Incident?
+                        </h6>
+                        <p class="mb-2">For immediate security threats or active incidents:</p>
+                        <div class="d-flex gap-2">
+                            <a href="tel:+18603054376" class="btn btn-danger btn-sm">
+                                <i class="fas fa-phone me-1"></i>Call: +1 (860) 305-4376
+                            </a>
+                            <a href="mailto:Admin@gemcybersecurityassist.com" class="btn btn-outline-danger btn-sm">
+                                <i class="fas fa-envelope me-1"></i>Emergency Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-envelope me-3"></i>Contact Us</h1>
+                <p class="lead">Get in touch with our security experts</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="contact-form-card">
+                    <h3 class="mb-4">Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service Interest</label>
+                            <select class="form-select" id="service">
+                                <option value="">Select a service...</option>
+                                <option value="cybersecurity">Cybersecurity Services</option>
+                                <option value="telegram">Telegram Automation</option>
+                                <option value="realestate">Real Estate Services</option>
+                                <option value="legal">Legal & Trust Services</option>
+                                <option value="investment">Investment Management</option>
+                                <option value="partnership">Partnership Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Please describe your needs or questions..." required></textarea>
+                        </div>
+                        
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agree" required>
+                            <label class="form-check-label" for="agree">
+                                I agree to the terms of service and privacy policy *
+                            </label>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <div class="contact-info-card">
+                    <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                    <h5>Email Us</h5>
+                    <div class="contact-details">
+                        <p><strong>Administration:</strong><br><a href="mailto:Admin@gemcybersecurityassist.com">Admin@gemcybersecurityassist.com</a></p>
+                        <p><strong>Support:</strong><br><a href="mailto:support@gemcybersecurityassist.com">support@gemcybersecurityassist.com</a></p>
+                        <p><strong>Security Analysis:</strong><br><a href="mailto:Analyzer@gemcybersecurityassist.com">Analyzer@gemcybersecurityassist.com</a></p>
+                        <p><strong>Real Estate:</strong><br><a href="mailto:support@alliancetrustrealty.com">support@alliancetrustrealty.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="contact-info-card">
+                    <i class="fas fa-phone fa-2x text-success mb-3"></i>
+                    <h5>Call Us</h5>
+                    <p>24/7 Security & Support Hotline<br><a href="tel:+18603054376">+1 (860) 305-4376</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="contact-info-card">
+                    <i class="fab fa-telegram fa-2x text-info mb-3"></i>
+                    <h5>Telegram</h5>
+                    <p>Secure Communication<br>@GemAssistBot</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="emergency-contact">
+                    <div class="alert alert-warning d-flex align-items-center">
+                        <i class="fas fa-exclamation-triangle fa-2x me-3"></i>
+                        <div>
+                            <h5 class="alert-heading">Security Emergency?</h5>
+                            <p class="mb-0">For immediate security incidents, contact our 24/7 emergency response team at <strong><a href="tel:+18603054376">+1 (860) 305-4376</a></strong> or email <strong><a href="mailto:Admin@gemcybersecurityassist.com">Admin@gemcybersecurityassist.com</a></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

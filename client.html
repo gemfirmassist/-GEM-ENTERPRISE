@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}Client Portal Access - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-user me-3"></i>Client Portal Access</h1>
+                <p class="lead">Secure access to your account and services</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="login-card">
+                    <div class="login-header text-center mb-4">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h3>Secure Client Login</h3>
+                        <p class="text-muted">Access your account dashboard and services</p>
+                    </div>
+                    
+                    <form id="clientLoginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username or Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" id="password" required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">
+                                Remember me on this device
+                            </label>
+                        </div>
+                        
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-sign-in-alt me-2"></i>Secure Login
+                            </button>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="#" class="text-decoration-none">Forgot your password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <div class="client-feature-card">
+                    <i class="fas fa-tachometer-alt fa-2x text-primary mb-3"></i>
+                    <h5>Real-time Dashboard</h5>
+                    <p>Monitor your security status, real estate portfolio, and service activities in real-time.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-feature-card">
+                    <i class="fas fa-bell fa-2x text-success mb-3"></i>
+                    <h5>Instant Alerts</h5>
+                    <p>Receive immediate notifications about security events, investment opportunities, and important updates.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-feature-card">
+                    <i class="fas fa-file-alt fa-2x text-info mb-3"></i>
+                    <h5>Document Access</h5>
+                    <p>Securely access all your legal documents, reports, and service agreements online.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-lg-4">
+                <div class="client-feature-card">
+                    <i class="fas fa-chart-bar fa-2x text-warning mb-3"></i>
+                    <h5>Performance Reports</h5>
+                    <p>Detailed analytics and performance reports for all your services and investments.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-feature-card">
+                    <i class="fas fa-headset fa-2x text-purple mb-3"></i>
+                    <h5>24/7 Support</h5>
+                    <p>Direct access to our support team for any questions or urgent assistance needs.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-feature-card">
+                    <i class="fas fa-mobile-alt fa-2x text-danger mb-3"></i>
+                    <h5>Mobile Access</h5>
+                    <p>Access your client portal from any device with our responsive, secure web interface.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="security-notice">
+                    <div class="alert alert-info d-flex align-items-center">
+                        <i class="fas fa-shield-check fa-2x me-3"></i>
+                        <div>
+                            <h5 class="alert-heading">Security Notice</h5>
+                            <p class="mb-0">Your client portal uses enterprise-grade encryption and multi-factor authentication. Never share your login credentials and always log out when finished. Contact support immediately if you suspect unauthorized access.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="new-client-section">
+                    <h4>New to GEM Enterprise?</h4>
+                    <p class="lead">Join our secure platform and experience professional security and trust services.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-primary btn-lg me-3">
+                        <i class="fas fa-user-plus me-2"></i>Request Account
+                    </a>
+                    <a href="{{ url_for('services') }}" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-info-circle me-2"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

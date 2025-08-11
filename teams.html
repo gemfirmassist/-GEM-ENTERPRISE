@@ -1,0 +1,547 @@
+{% extends "base.html" %}
+
+{% block title %}Leadership & Teams - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-crown me-3 text-warning"></i>Leadership & Teams</h1>
+                <p class="lead">Meet our executive leadership and specialized teams driving innovation in cybersecurity and real estate services</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Leadership Title Section -->
+<section class="py-4 bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="section-title mb-4">
+                    <i class="fas fa-users-crown me-2 text-warning"></i>
+                    Executive Leadership
+                </h2>
+                <p class="lead text-muted mb-0">
+                    Our seasoned leadership team combines decades of experience in cybersecurity, real estate, and financial services.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Live Notion Dashboard Integration -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="notion-dashboard-section">
+                    <h3 class="text-center mb-4">
+                        <i class="fas fa-database me-2"></i>
+                        Live Team Dashboard
+                    </h3>
+                    <p class="text-center text-muted mb-4">
+                        Real-time team information with photos and profiles synchronized from our internal GEM dashboard
+                    </p>
+                    <div class="notion-embed-container">
+                        <iframe 
+                            src="https://www.notion.so/embed/{{ database_id if database_id else 'your-database-id' }}"
+                            width="100%" 
+                            height="600"
+                            style="border: none; border-radius: 8px;">
+                        </iframe>
+                    </div>
+                    <div class="text-center mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-sync-alt me-1"></i>
+                            Data updates automatically from Notion GEM dashboard with images and contact information
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2>Department Overview</h2>
+                <p class="lead text-muted">Our multidisciplinary team combines expertise in cybersecurity, real estate, legal services, and technology automation to provide comprehensive solutions.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="team-department-card">
+                    <div class="department-header">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h3>Cybersecurity Team</h3>
+                        <p class="text-muted">Digital threat monitoring and incident response specialists</p>
+                    </div>
+                    <div class="department-content">
+                        <h5>Team Composition:</h5>
+                        <ul class="team-roles">
+                            <li><i class="fas fa-user-tie me-2"></i>Chief Security Officer</li>
+                            <li><i class="fas fa-user-shield me-2"></i>Security Analysts (24/7)</li>
+                            <li><i class="fas fa-user-secret me-2"></i>Threat Intelligence Specialists</li>
+                            <li><i class="fas fa-user-cog me-2"></i>Incident Response Team</li>
+                            <li><i class="fas fa-user-check me-2"></i>Compliance Officers</li>
+                        </ul>
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <strong>{{ cybersecurity_team|length if cybersecurity_team else '15+' }}</strong>
+                                <span>Security Experts</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>50+</strong>
+                                <span>Certifications</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>24/7</strong>
+                                <span>Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="team-department-card">
+                    <div class="department-header">
+                        <i class="fas fa-home fa-3x text-success mb-3"></i>
+                        <h3>Real Estate Team</h3>
+                        <p class="text-muted">Alliance Trust Realty LLC partnership specialists</p>
+                    </div>
+                    <div class="department-content">
+                        <h5>Team Composition:</h5>
+                        <ul class="team-roles">
+                            <li><i class="fas fa-user-tie me-2"></i>Real Estate Director</li>
+                            <li><i class="fas fa-user-tag me-2"></i>Property Managers</li>
+                            <li><i class="fas fa-user-chart me-2"></i>Investment Analysts</li>
+                            <li><i class="fas fa-user-search me-2"></i>Market Research Team</li>
+                            <li><i class="fas fa-user-edit me-2"></i>Asset Recovery Specialists</li>
+                        </ul>
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <strong>{{ real_estate_team|length if real_estate_team else '12+' }}</strong>
+                                <span>Real Estate Experts</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>$50M+</strong>
+                                <span>Assets Managed</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>95%</strong>
+                                <span>Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="team-department-card">
+                    <div class="department-header">
+                        <i class="fas fa-robot fa-3x text-info mb-3"></i>
+                        <h3>Technology Team</h3>
+                        <p class="text-muted">Automation and integration specialists</p>
+                    </div>
+                    <div class="department-content">
+                        <h5>Team Composition:</h5>
+                        <ul class="team-roles">
+                            <li><i class="fas fa-user-tie me-2"></i>Technology Director</li>
+                            <li><i class="fas fa-user-code me-2"></i>Bot Development Team</li>
+                            <li><i class="fas fa-user-cogs me-2"></i>Systems Integration Specialists</li>
+                            <li><i class="fas fa-user-laptop me-2"></i>API Integration Engineers</li>
+                            <li><i class="fas fa-user-wrench me-2"></i>Technical Support Team</li>
+                        </ul>
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <strong>8+</strong>
+                                <span>Developers</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>100+</strong>
+                                <span>Bots Deployed</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>99.9%</strong>
+                                <span>Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="team-department-card">
+                    <div class="department-header">
+                        <i class="fas fa-gavel fa-3x text-warning mb-3"></i>
+                        <h3>Legal Team</h3>
+                        <p class="text-muted">Trust services and legal documentation experts</p>
+                    </div>
+                    <div class="department-content">
+                        <h5>Team Composition:</h5>
+                        <ul class="team-roles">
+                            <li><i class="fas fa-user-tie me-2"></i>Legal Counsel</li>
+                            <li><i class="fas fa-user-graduate me-2"></i>Trust Attorneys</li>
+                            <li><i class="fas fa-user-shield me-2"></i>Compliance Specialists</li>
+                            <li><i class="fas fa-user-edit me-2"></i>Documentation Team</li>
+                            <li><i class="fas fa-user-check me-2"></i>Legal Consultants</li>
+                        </ul>
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <strong>6+</strong>
+                                <span>Legal Experts</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>500+</strong>
+                                <span>Cases Handled</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>100%</strong>
+                                <span>Compliance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Leadership Profiles Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="text-center mb-5">
+                    <i class="fas fa-id-card me-2"></i>
+                    Leadership Profiles with Contact & Media
+                </h2>
+                <p class="text-center text-muted mb-4">
+                    Detailed profiles, professional contact information, and media presence of our executive team
+                </p>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="mb-4">
+                    <i class="fas fa-shield-alt text-primary me-2"></i>
+                    Cybersecurity Leadership
+                </h3>
+            </div>
+            
+            <!-- John Doe - Cybersecurity Director -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="leadership-profile-card">
+                    <div class="profile-header">
+                        <div class="team-member-avatar bg-primary d-flex align-items-center justify-content-center">
+                            <i class="fas fa-shield-alt fa-2x text-white"></i>
+                        </div>
+                        <div class="profile-title">
+                            <h5 class="team-member-name">John Doe</h5>
+                            <p class="team-member-position">Cybersecurity Director</p>
+                            <span class="team-member-department bg-primary">Executive Leadership</span>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <p class="team-member-bio">Oversees threat intelligence operations and system security audits across financial and real estate channels. 15+ years experience in cybersecurity.</p>
+                        
+                        <div class="profile-section">
+                            <h6><i class="fas fa-phone me-2"></i>Contact Information</h6>
+                            <ul class="contact-info">
+                                <li><i class="fas fa-envelope me-2"></i>johndoe@gemcybersecurityassist.com</li>
+                                <li><i class="fas fa-phone me-2"></i>+1 (860) 305-4376 ext. 101</li>
+                                <li><i class="fab fa-telegram me-2"></i>@johndoe_gem</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h6><i class="fas fa-share-alt me-2"></i>Media & Social</h6>
+                            <div class="media-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fab fa-linkedin me-1"></i>LinkedIn
+                                </a>
+                                <a href="https://t.me/johndoe_gem" class="btn btn-sm btn-outline-info">
+                                    <i class="fab fa-telegram me-1"></i>Telegram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Victor Chinemelomu - Chief Compliance & Intelligence Officer -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="leadership-profile-card">
+                    <div class="profile-header">
+                        <div class="team-member-avatar bg-warning d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user-shield fa-2x text-white"></i>
+                        </div>
+                        <div class="profile-title">
+                            <h5 class="team-member-name">Victor Chinemelomu</h5>
+                            <p class="team-member-position">Chief Compliance & Intelligence Officer</p>
+                            <span class="team-member-department bg-warning">Executive Leadership</span>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <p class="team-member-bio">Directs client regulatory intake, fraud detection systems, and ensures alignment with KYC/AML frameworks globally. Expert in international compliance.</p>
+                        
+                        <div class="profile-section">
+                            <h6><i class="fas fa-phone me-2"></i>Contact Information</h6>
+                            <ul class="contact-info">
+                                <li><i class="fas fa-envelope me-2"></i>chinemelomu@gemcybersecurityassist.com</li>
+                                <li><i class="fas fa-phone me-2"></i>+1 (860) 305-4376 ext. 102</li>
+                                <li><i class="fab fa-telegram me-2"></i>@gemintell</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h6><i class="fas fa-share-alt me-2"></i>Media & Social</h6>
+                            <div class="media-links">
+                                <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fab fa-linkedin me-1"></i>LinkedIn
+                                </a>
+                                <a href="https://t.me/gemintell" class="btn btn-sm btn-outline-info">
+                                    <i class="fab fa-telegram me-1"></i>Telegram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sophia Martinez - Director of Financial Recovery Operations -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member-card">
+                    <div class="team-member-avatar bg-danger d-flex align-items-center justify-content-center">
+                        <i class="fas fa-search-dollar fa-2x text-white"></i>
+                    </div>
+                    <h5 class="team-member-name">Sophia Martinez</h5>
+                    <p class="team-member-position">Director of Financial Recovery Operations</p>
+                    <span class="team-member-department bg-danger">Cybersecurity</span>
+                    <p class="team-member-bio">Manages digital asset tracing, evidence reporting for victims, and legal documentation flows with partner institutions.</p>
+                    <div class="contact-links">
+                        <a href="mailto:sophia@gemcybersecurityassist.com" class="btn btn-sm btn-outline-primary me-2">
+                            <i class="fas fa-envelope me-1"></i>Email
+                        </a>
+                        <a href="https://t.me/sophiarecovery" class="btn btn-sm btn-outline-info">
+                            <i class="fab fa-telegram me-1"></i>Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Eric Lin - AI Systems Architect -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member-card">
+                    <div class="team-member-avatar bg-info d-flex align-items-center justify-content-center">
+                        <i class="fas fa-robot fa-2x text-white"></i>
+                    </div>
+                    <h5 class="team-member-name">Eric Lin</h5>
+                    <p class="team-member-position">AI Systems Architect</p>
+                    <span class="team-member-department bg-info">Cybersecurity</span>
+                    <p class="team-member-bio">Designs automation pipelines and AI-assisted compliance analytics integrated into the GEM platform backend.</p>
+                    <div class="contact-links">
+                        <a href="mailto:ericlin@gemcybersecurityassist.com" class="btn btn-sm btn-outline-primary me-2">
+                            <i class="fas fa-envelope me-1"></i>Email
+                        </a>
+                        <a href="https://t.me/ai_eric" class="btn btn-sm btn-outline-info">
+                            <i class="fab fa-telegram me-1"></i>Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="mb-4">
+                    <i class="fas fa-home text-success me-2"></i>
+                    Real Estate Division - Alliance Trust Realty LLC
+                </h3>
+            </div>
+            
+            <!-- Jane Smith - Real Estate Consultant -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member-card">
+                    <div class="team-member-avatar bg-success d-flex align-items-center justify-content-center">
+                        <i class="fas fa-home fa-2x text-white"></i>
+                    </div>
+                    <h5 class="team-member-name">Jane Smith</h5>
+                    <p class="team-member-position">Real Estate Consultant</p>
+                    <span class="team-member-department bg-success">Real Estate</span>
+                    <p class="team-member-bio">Leads property investment strategy and integrated leasing partnerships under ATR LLC.</p>
+                    <div class="contact-links">
+                        <a href="mailto:janesmith@alliancetrustrealty.com" class="btn btn-sm btn-outline-success me-2">
+                            <i class="fas fa-envelope me-1"></i>Email
+                        </a>
+                        <a href="https://t.me/janesmith" class="btn btn-sm btn-outline-info">
+                            <i class="fab fa-telegram me-1"></i>Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="mb-4">
+                    <i class="fas fa-gavel text-secondary me-2"></i>
+                    Legal & Compliance Division
+                </h3>
+            </div>
+            
+            <!-- Angela Robinson - Legal & Regulatory Liaison Officer -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member-card">
+                    <div class="team-member-avatar bg-secondary d-flex align-items-center justify-content-center">
+                        <i class="fas fa-balance-scale fa-2x text-white"></i>
+                    </div>
+                    <h5 class="team-member-name">Angela Robinson</h5>
+                    <p class="team-member-position">Legal & Regulatory Liaison Officer</p>
+                    <span class="team-member-department bg-secondary">Legal & Compliance</span>
+                    <p class="team-member-bio">Coordinates with regulatory bodies, compliance attorneys, and handles contract vetting for recovery and real estate services.</p>
+                    <div class="contact-links">
+                        <a href="mailto:angela@gemcybersecurityassist.com" class="btn btn-sm btn-outline-secondary me-2">
+                            <i class="fas fa-envelope me-1"></i>Email
+                        </a>
+                        <a href="https://t.me/legalangel" class="btn btn-sm btn-outline-info">
+                            <i class="fab fa-telegram me-1"></i>Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notion Dashboard Embed -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="notion-dashboard-section">
+                    <h2 class="text-center mb-4">
+                        <i class="fas fa-users me-2"></i>
+                        Live Team Dashboard
+                    </h2>
+                    <p class="text-center text-muted mb-4">
+                        Explore our active board members, cybersecurity advisors, real estate consultants, and technical leads powering the GEM platform.
+                    </p>
+                    <div class="notion-embed-container">
+                        <iframe 
+                            src="https://www.notion.so/GEM-ATR-Master-Dashboard-232b5b56eac280ab9d3cfcbf2eff87a8?v=22fb5b56eac28027acbd000c35b0f82b" 
+                            width="100%" 
+                            height="600" 
+                            frameborder="0" 
+                            allowfullscreen
+                            style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="team-values-section">
+                    <h3 class="text-center mb-4">Our Team Values</h3>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="value-card">
+                                <i class="fas fa-award text-primary fa-2x mb-3"></i>
+                                <h5>Excellence</h5>
+                                <p>Committed to delivering the highest quality services and maintaining professional standards.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="value-card">
+                                <i class="fas fa-handshake text-success fa-2x mb-3"></i>
+                                <h5>Integrity</h5>
+                                <p>Building trust through transparent communication and ethical business practices.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="value-card">
+                                <i class="fas fa-lightbulb text-warning fa-2x mb-3"></i>
+                                <h5>Innovation</h5>
+                                <p>Continuously advancing our capabilities with cutting-edge technology and methodologies.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="value-card">
+                                <i class="fas fa-users text-info fa-2x mb-3"></i>
+                                <h5>Collaboration</h5>
+                                <p>Working together across departments to provide comprehensive, integrated solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="team-certifications">
+                    <h3 class="text-center mb-4">Team Certifications & Expertise</h3>
+                    <div class="certifications-grid">
+                        <div class="cert-category">
+                            <h5><i class="fas fa-shield-alt me-2"></i>Cybersecurity</h5>
+                            <ul class="cert-list">
+                                <li>CISSP - Certified Information Systems Security Professional</li>
+                                <li>CISM - Certified Information Security Manager</li>
+                                <li>CEH - Certified Ethical Hacker</li>
+                                <li>GCIH - GIAC Certified Incident Handler</li>
+                                <li>Security+ - CompTIA Security+</li>
+                            </ul>
+                        </div>
+                        <div class="cert-category">
+                            <h5><i class="fas fa-home me-2"></i>Real Estate</h5>
+                            <ul class="cert-list">
+                                <li>Licensed Real Estate Professionals</li>
+                                <li>Certified Property Managers (CPM)</li>
+                                <li>Real Estate Investment Analysis</li>
+                                <li>Asset Recovery Specialists</li>
+                                <li>Commercial Real Estate Certifications</li>
+                            </ul>
+                        </div>
+                        <div class="cert-category">
+                            <h5><i class="fas fa-gavel me-2"></i>Legal</h5>
+                            <ul class="cert-list">
+                                <li>Licensed Attorneys</li>
+                                <li>Trust and Estate Law</li>
+                                <li>Corporate Law</li>
+                                <li>Real Estate Law</li>
+                                <li>Compliance and Regulatory Law</li>
+                            </ul>
+                        </div>
+                        <div class="cert-category">
+                            <h5><i class="fas fa-code me-2"></i>Technology</h5>
+                            <ul class="cert-list">
+                                <li>Software Development Certifications</li>
+                                <li>Cloud Platform Certifications (AWS, Azure)</li>
+                                <li>API Integration Specialists</li>
+                                <li>Database Management</li>
+                                <li>Automation and DevOps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="join-team-section">
+                    <h3>Join Our Team</h3>
+                    <p class="lead">We're always looking for talented professionals to join our growing team.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-user-plus me-2"></i>Career Opportunities
+                    </a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-handshake me-2"></i>Work With Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

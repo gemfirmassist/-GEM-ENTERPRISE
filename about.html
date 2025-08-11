@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-info-circle me-3"></i>About Gem Assist Enterprise</h1>
+                <p class="lead">Professional Security & Trust Services</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="content-card">
+                    <h2>Our Mission</h2>
+                    <p class="lead">GEM Cybersecurity & Monitoring Assist, in partnership with Alliance Trust Realty LLC, provides comprehensive digital threat monitoring, asset recovery, real estate services, and cybersecurity solutions for businesses and individuals.</p>
+                    
+                    <h3 class="mt-5">Company Overview</h3>
+                    <p>We are a leading provider of professional security and trust services, combining cutting-edge cybersecurity technology with traditional trust and real estate expertise. Our integrated approach ensures comprehensive protection for our clients' digital and physical assets.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <i class="fas fa-shield-alt text-primary fa-2x mb-3"></i>
+                                <h4>Cybersecurity Excellence</h4>
+                                <p>Advanced threat detection, monitoring, and response capabilities with 24/7 surveillance and rapid incident response.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <i class="fas fa-home text-success fa-2x mb-3"></i>
+                                <h4>Real Estate Expertise</h4>
+                                <p>Professional real estate investment, management, and legal services through our Alliance Trust Realty LLC partnership.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-5">Our Values</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Security First:</strong> Every solution prioritizes security and data protection</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Trust & Transparency:</strong> Building lasting relationships through honest communication</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Innovation:</strong> Leveraging cutting-edge technology for optimal results</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Client Focus:</strong> Customized solutions tailored to individual needs</li>
+                    </ul>
+                    
+                    <div class="cta-section mt-5 text-center">
+                        <h4>Ready to Secure Your Future?</h4>
+                        <p>Contact us today to learn how we can protect and grow your assets.</p>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

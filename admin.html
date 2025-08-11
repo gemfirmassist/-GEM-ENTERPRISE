@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Panel - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-cog me-3"></i>Administrative Panel</h1>
+                <p class="lead">System administration and management console</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="admin-login-card">
+                    <div class="admin-login-header text-center mb-4">
+                        <i class="fas fa-user-shield fa-3x text-danger mb-3"></i>
+                        <h3>Administrator Access</h3>
+                        <p class="text-muted">Restricted access - authorized personnel only</p>
+                    </div>
+                    
+                    <form id="adminLoginForm">
+                        <div class="mb-3">
+                            <label for="adminUsername" class="form-label">Administrator Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                <input type="text" class="form-control" id="adminUsername" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="adminPassword" class="form-label">Secure Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                <input type="password" class="form-control" id="adminPassword" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="adminToken" class="form-label">Two-Factor Authentication Token</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-shield-alt"></i></span>
+                                <input type="text" class="form-control" id="adminToken" placeholder="6-digit code" required>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-danger btn-lg">
+                                <i class="fas fa-unlock me-2"></i>Secure Admin Access
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <div class="admin-module-card">
+                    <i class="fas fa-users-cog fa-2x text-primary mb-3"></i>
+                    <h5>User Management</h5>
+                    <p>Manage client accounts, permissions, and access controls across all services.</p>
+                    <ul class="admin-features">
+                        <li>Client Account Administration</li>
+                        <li>Role-based Access Control</li>
+                        <li>Security Permissions</li>
+                        <li>Account Status Management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="admin-module-card">
+                    <i class="fas fa-chart-line fa-2x text-success mb-3"></i>
+                    <h5>System Analytics</h5>
+                    <p>Comprehensive analytics and reporting for all system activities and performance metrics.</p>
+                    <ul class="admin-features">
+                        <li>Real-time System Monitoring</li>
+                        <li>Security Incident Reports</li>
+                        <li>Performance Analytics</li>
+                        <li>Usage Statistics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="admin-module-card">
+                    <i class="fas fa-shield-virus fa-2x text-warning mb-3"></i>
+                    <h5>Security Management</h5>
+                    <p>Advanced security configuration and threat management console for system protection.</p>
+                    <ul class="admin-features">
+                        <li>Threat Detection Configuration</li>
+                        <li>Security Policy Management</li>
+                        <li>Incident Response Coordination</li>
+                        <li>Vulnerability Assessment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="admin-module-card">
+                    <i class="fas fa-robot fa-2x text-info mb-3"></i>
+                    <h5>Automation Control</h5>
+                    <p>Manage Telegram bots, automated workflows, and system integration services.</p>
+                    <ul class="admin-features">
+                        <li>Bot Configuration Management</li>
+                        <li>Workflow Automation</li>
+                        <li>API Integration Settings</li>
+                        <li>Notification Management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="admin-module-card">
+                    <i class="fas fa-database fa-2x text-purple mb-3"></i>
+                    <h5>Data Management</h5>
+                    <p>Database administration, backup management, and data integrity monitoring.</p>
+                    <ul class="admin-features">
+                        <li>Database Administration</li>
+                        <li>Backup & Recovery</li>
+                        <li>Data Integrity Checks</li>
+                        <li>Storage Management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="admin-module-card">
+                    <i class="fas fa-cogs fa-2x text-danger mb-3"></i>
+                    <h5>System Configuration</h5>
+                    <p>Core system settings, service configuration, and platform administration tools.</p>
+                    <ul class="admin-features">
+                        <li>Service Configuration</li>
+                        <li>System Settings</li>
+                        <li>Integration Management</li>
+                        <li>Platform Administration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="admin-security-notice">
+                    <div class="alert alert-danger d-flex align-items-center">
+                        <i class="fas fa-exclamation-triangle fa-2x me-3"></i>
+                        <div>
+                            <h5 class="alert-heading">Restricted Access Area</h5>
+                            <p class="mb-0">This administrative panel is restricted to authorized GEM Enterprise personnel only. All access attempts are logged and monitored. Unauthorized access attempts will be reported to security teams and may result in legal action.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="admin-support-section">
+                    <h4>Administrator Support</h4>
+                    <p>For technical support or system issues, contact the IT Security team.</p>
+                    <a href="mailto:admin@gemassist.com" class="btn btn-outline-danger btn-lg me-3">
+                        <i class="fas fa-envelope me-2"></i>IT Support
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-headset me-2"></i>Contact Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

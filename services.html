@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-cogs me-3"></i>Our Services</h1>
+                <p class="lead">Comprehensive Security & Trust Solutions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Cybersecurity Services -->
+            <div class="col-lg-6">
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <i class="fas fa-shield-virus fa-2x text-primary"></i>
+                        <h3>Cybersecurity Services</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check me-2"></i>24/7 Threat Monitoring</li>
+                        <li><i class="fas fa-check me-2"></i>Incident Response</li>
+                        <li><i class="fas fa-check me-2"></i>Vulnerability Assessment</li>
+                        <li><i class="fas fa-check me-2"></i>Security Audits</li>
+                        <li><i class="fas fa-check me-2"></i>Compliance Management</li>
+                    </ul>
+                    <a href="{{ url_for('monitoring') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Automation Services -->
+            <div class="col-lg-6">
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <i class="fab fa-telegram fa-2x text-info"></i>
+                        <h3>Telegram Automation</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check me-2"></i>Custom Bot Development</li>
+                        <li><i class="fas fa-check me-2"></i>Automated Notifications</li>
+                        <li><i class="fas fa-check me-2"></i>Workflow Integration</li>
+                        <li><i class="fas fa-check me-2"></i>Secure Messaging</li>
+                        <li><i class="fas fa-check me-2"></i>API Integration</li>
+                    </ul>
+                    <a href="{{ url_for('telegram_bot') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Real Estate Services -->
+            <div class="col-lg-6">
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <i class="fas fa-home fa-2x text-success"></i>
+                        <h3>Real Estate Services</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check me-2"></i>Investment Analysis</li>
+                        <li><i class="fas fa-check me-2"></i>Property Management</li>
+                        <li><i class="fas fa-check me-2"></i>Asset Recovery</li>
+                        <li><i class="fas fa-check me-2"></i>Market Research</li>
+                        <li><i class="fas fa-check me-2"></i>Legal Documentation</li>
+                    </ul>
+                    <a href="{{ url_for('investment_portfolio') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Legal Services -->
+            <div class="col-lg-6">
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <i class="fas fa-gavel fa-2x text-warning"></i>
+                        <h3>Legal & Trust Services</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check me-2"></i>Power of Attorney</li>
+                        <li><i class="fas fa-check me-2"></i>Trust Management</li>
+                        <li><i class="fas fa-check me-2"></i>Asset Protection</li>
+                        <li><i class="fas fa-check me-2"></i>Legal Consultation</li>
+                        <li><i class="fas fa-check me-2"></i>Document Preparation</li>
+                    </ul>
+                    <a href="{{ url_for('power_of_attorney') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Partnership Services -->
+            <div class="col-lg-6">
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <i class="fas fa-handshake fa-2x text-purple"></i>
+                        <h3>Partnership Services</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check me-2"></i>Strategic Partnerships</li>
+                        <li><i class="fas fa-check me-2"></i>Trustee Services</li>
+                        <li><i class="fas fa-check me-2"></i>Business Consulting</li>
+                        <li><i class="fas fa-check me-2"></i>Joint Ventures</li>
+                        <li><i class="fas fa-check me-2"></i>Investment Partnerships</li>
+                    </ul>
+                    <a href="{{ url_for('partners') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Investment Services -->
+            <div class="col-lg-6">
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <i class="fas fa-chart-line fa-2x text-danger"></i>
+                        <h3>Investment Management</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check me-2"></i>Portfolio Analysis</li>
+                        <li><i class="fas fa-check me-2"></i>Risk Assessment</li>
+                        <li><i class="fas fa-check me-2"></i>Investment Strategy</li>
+                        <li><i class="fas fa-check me-2"></i>Market Intelligence</li>
+                        <li><i class="fas fa-check me-2"></i>Performance Tracking</li>
+                    </ul>
+                    <a href="{{ url_for('investment_portfolio') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="cta-section">
+                    <h3>Need a Custom Solution?</h3>
+                    <p class="lead">We provide tailored services to meet your specific security and trust requirements.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-envelope me-2"></i>Contact Us
+                    </a>
+                    <a href="{{ url_for('client_access') }}" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-user me-2"></i>Client Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

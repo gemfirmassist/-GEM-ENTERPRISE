@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Telegram Bot Automation - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fab fa-telegram me-3"></i>Telegram Bot Automation</h1>
+                <p class="lead">Advanced automation and secure communication solutions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="content-card">
+                    <h2>Telegram Automation Services</h2>
+                    <p class="lead">Leverage the power of Telegram bots for secure communication, automated workflows, and enhanced business operations.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <i class="fas fa-robot text-primary fa-2x mb-3"></i>
+                                <h4>Custom Bot Development</h4>
+                                <p>Tailored Telegram bots designed to meet your specific business requirements and security needs.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <i class="fas fa-bell text-info fa-2x mb-3"></i>
+                                <h4>Automated Notifications</h4>
+                                <p>Real-time alerts and notifications for security events, system status, and business updates.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <i class="fas fa-cogs text-success fa-2x mb-3"></i>
+                                <h4>Workflow Integration</h4>
+                                <p>Seamless integration with existing systems and automated workflow management.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <i class="fas fa-lock text-warning fa-2x mb-3"></i>
+                                <h4>Secure Messaging</h4>
+                                <p>End-to-end encrypted communication channels for sensitive business communications.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-5">Bot Capabilities</h3>
+                    <div class="capabilities-list">
+                        <div class="capability-item">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <div>
+                                <h5>Security Monitoring Bot</h5>
+                                <p>Real-time security alerts, threat notifications, and incident reporting through Telegram.</p>
+                            </div>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <div>
+                                <h5>Real Estate Assistant Bot</h5>
+                                <p>Property updates, investment alerts, and market analysis delivered directly to your Telegram.</p>
+                            </div>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <div>
+                                <h5>Client Communication Bot</h5>
+                                <p>Automated client support, appointment scheduling, and service updates.</p>
+                            </div>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <div>
+                                <h5>API Integration Bot</h5>
+                                <p>Connect external services and APIs for comprehensive data management and automation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section mt-5 text-center">
+                        <h4>Ready to Automate Your Business?</h4>
+                        <p>Contact us to discuss your Telegram automation needs and get a custom solution.</p>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-envelope me-2"></i>Get Started
+                        </a>
+                        <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-cogs me-2"></i>All Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% block title %}News & Newsletter - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-newspaper me-3"></i>GEM News & Newsletter</h1>
+                <p class="lead">Stay informed about security trends and company updates</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="news-articles">
+                    <article class="news-article">
+                        <div class="article-header">
+                            <div class="article-meta">
+                                <span class="badge bg-danger">Security Alert</span>
+                                <span class="text-muted">January 15, 2025</span>
+                            </div>
+                            <h3>Enhanced Threat Detection Capabilities Deployed</h3>
+                        </div>
+                        <div class="article-content">
+                            <p>GEM Enterprise has successfully deployed advanced AI-powered threat detection systems across all monitoring services. This enhancement provides 40% faster threat identification and automated response capabilities.</p>
+                            <p>Key improvements include:</p>
+                            <ul>
+                                <li>Machine learning-based anomaly detection</li>
+                                <li>Automated incident response protocols</li>
+                                <li>Enhanced threat intelligence integration</li>
+                                <li>Improved false positive reduction</li>
+                            </ul>
+                        </div>
+                        <div class="article-footer">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-article">
+                        <div class="article-header">
+                            <div class="article-meta">
+                                <span class="badge bg-success">Partnership</span>
+                                <span class="text-muted">January 10, 2025</span>
+                            </div>
+                            <h3>Alliance Trust Realty Expands Real Estate Portfolio</h3>
+                        </div>
+                        <div class="article-content">
+                            <p>Our strategic partnership with Alliance Trust Realty LLC has resulted in significant portfolio expansion, adding premium commercial and residential properties across key markets.</p>
+                            <p>This expansion includes:</p>
+                            <ul>
+                                <li>Commercial office complexes in major metropolitan areas</li>
+                                <li>Residential investment properties</li>
+                                <li>Mixed-use development opportunities</li>
+                                <li>Secured asset recovery real estate</li>
+                            </ul>
+                        </div>
+                        <div class="article-footer">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-article">
+                        <div class="article-header">
+                            <div class="article-meta">
+                                <span class="badge bg-info">Technology</span>
+                                <span class="text-muted">January 5, 2025</span>
+                            </div>
+                            <h3>Telegram Automation Platform Upgrade</h3>
+                        </div>
+                        <div class="article-content">
+                            <p>Our Telegram automation services have received major upgrades with enhanced security features, improved API integration, and expanded customization options for business clients.</p>
+                            <p>New features include:</p>
+                            <ul>
+                                <li>Advanced encryption for all bot communications</li>
+                                <li>Custom workflow builder interface</li>
+                                <li>Multi-platform integration capabilities</li>
+                                <li>Enhanced analytics and reporting</li>
+                            </ul>
+                        </div>
+                        <div class="article-footer">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-article">
+                        <div class="article-header">
+                            <div class="article-meta">
+                                <span class="badge bg-warning">Industry Insight</span>
+                                <span class="text-muted">December 28, 2024</span>
+                            </div>
+                            <h3>Cybersecurity Trends for 2025: What to Expect</h3>
+                        </div>
+                        <div class="article-content">
+                            <p>As we enter 2025, cybersecurity landscapes continue to evolve rapidly. Our security experts analyze the top trends and threats businesses should prepare for in the coming year.</p>
+                            <p>Key trends to watch:</p>
+                            <ul>
+                                <li>AI-powered cyber attacks and defenses</li>
+                                <li>Quantum computing security implications</li>
+                                <li>Zero-trust architecture adoption</li>
+                                <li>Supply chain security focus</li>
+                            </ul>
+                        </div>
+                        <div class="article-footer">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="pagination-section mt-5">
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <span class="page-link">Previous</span>
+                            </li>
+                            <li class="page-item active">
+                                <span class="page-link">1</span>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="newsletter-signup">
+                        <h4><i class="fas fa-envelope me-2"></i>Subscribe to Newsletter</h4>
+                        <p>Stay updated with the latest security insights and company news.</p>
+                        <form id="newsletterForm">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your email address" required>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select" required>
+                                    <option value="">Select interests...</option>
+                                    <option value="security">Security Updates</option>
+                                    <option value="realestate">Real Estate News</option>
+                                    <option value="technology">Technology Insights</option>
+                                    <option value="all">All Updates</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-bell me-2"></i>Subscribe
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="recent-updates">
+                        <h5>Recent Updates</h5>
+                        <div class="update-item">
+                            <i class="fas fa-shield-check text-success me-2"></i>
+                            <div>
+                                <small class="text-muted">System Status</small>
+                                <p class="mb-0">All monitoring systems operational</p>
+                            </div>
+                        </div>
+                        <div class="update-item">
+                            <i class="fas fa-chart-up text-info me-2"></i>
+                            <div>
+                                <small class="text-muted">Performance</small>
+                                <p class="mb-0">Response time improved by 25%</p>
+                            </div>
+                        </div>
+                        <div class="update-item">
+                            <i class="fas fa-users text-primary me-2"></i>
+                            <div>
+                                <small class="text-muted">Team</small>
+                                <p class="mb-0">New security specialists joined</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-links">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ url_for('services') }}"><i class="fas fa-cogs me-2"></i>Our Services</a></li>
+                            <li><a href="{{ url_for('client_access') }}"><i class="fas fa-user me-2"></i>Client Portal</a></li>
+                            <li><a href="{{ url_for('contact') }}"><i class="fas fa-envelope me-2"></i>Contact Support</a></li>
+                            <li><a href="{{ url_for('testimonials') }}"><i class="fas fa-star me-2"></i>Testimonials</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="security-status">
+                        <h5>Security Status</h5>
+                        <div class="status-dashboard">
+                            <div class="status-item">
+                                <span class="status-dot status-active"></span>
+                                <span>Threat Monitoring: Active</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-dot status-active"></span>
+                                <span>System Security: Optimal</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-dot status-active"></span>
+                                <span>Response Team: Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Threat Monitoring - Gem Assist Enterprise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><i class="fas fa-eye me-3"></i>Threat Monitoring Services</h1>
+                <p class="lead">24/7 digital security surveillance and protection</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="content-card">
+                    <h2>Advanced Threat Detection</h2>
+                    <p class="lead">Our comprehensive threat monitoring service provides round-the-clock surveillance and protection against digital threats, ensuring your assets and data remain secure.</p>
+                    
+                    <div class="monitoring-dashboard mt-5">
+                        <h3>Live Security Dashboard</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="metric-card">
+                                    <i class="fas fa-shield-check fa-2x text-success mb-2"></i>
+                                    <h4>Active</h4>
+                                    <p>System Status</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="metric-card">
+                                    <i class="fas fa-eye fa-2x text-primary mb-2"></i>
+                                    <h4>24/7</h4>
+                                    <p>Continuous Monitoring</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="metric-card">
+                                    <i class="fas fa-clock fa-2x text-warning mb-2"></i>
+                                    <h4>&lt; 2min</h4>
+                                    <p>Response Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-5">Monitoring Capabilities</h3>
+                    <div class="capabilities-grid">
+                        <div class="capability-card">
+                            <i class="fas fa-virus text-danger fa-2x mb-3"></i>
+                            <h4>Malware Detection</h4>
+                            <p>Advanced malware identification and removal with real-time scanning and quarantine capabilities.</p>
+                        </div>
+                        <div class="capability-card">
+                            <i class="fas fa-user-secret text-info fa-2x mb-3"></i>
+                            <h4>Intrusion Detection</h4>
+                            <p>Monitor for unauthorized access attempts and suspicious network activity patterns.</p>
+                        </div>
+                        <div class="capability-card">
+                            <i class="fas fa-database text-success fa-2x mb-3"></i>
+                            <h4>Data Breach Prevention</h4>
+                            <p>Protect sensitive data with encryption monitoring and access control verification.</p>
+                        </div>
+                        <div class="capability-card">
+                            <i class="fas fa-wifi text-primary fa-2x mb-3"></i>
+                            <h4>Network Security</h4>
+                            <p>Comprehensive network traffic analysis and firewall management for optimal protection.</p>
+                        </div>
+                        <div class="capability-card">
+                            <i class="fas fa-mobile-alt text-warning fa-2x mb-3"></i>
+                            <h4>Endpoint Protection</h4>
+                            <p>Secure all devices connected to your network with advanced endpoint detection and response.</p>
+                        </div>
+                        <div class="capability-card">
+                            <i class="fas fa-chart-line text-purple fa-2x mb-3"></i>
+                            <h4>Threat Intelligence</h4>
+                            <p>Stay ahead of emerging threats with our advanced threat intelligence and analysis platform.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-5">Response Protocol</h3>
+                    <div class="response-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-danger"></div>
+                            <div class="timeline-content">
+                                <h5>Threat Detection</h5>
+                                <p>Immediate identification and classification of security threats</p>
+                                <small class="text-muted">Within seconds</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-warning"></div>
+                            <div class="timeline-content">
+                                <h5>Alert Generation</h5>
+                                <p>Automated notifications sent to security team and client stakeholders</p>
+                                <small class="text-muted">Within 30 seconds</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-info"></div>
+                            <div class="timeline-content">
+                                <h5>Initial Response</h5>
+                                <p>Security team assessment and containment measures initiated</p>
+                                <small class="text-muted">Within 2 minutes</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h5>Resolution</h5>
+                                <p>Threat neutralized and systems restored to secure state</p>
+                                <small class="text-muted">Within 15 minutes</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-success mt-5">
+                        <i class="fas fa-shield-check me-2"></i>
+                        <strong>Guaranteed Protection:</strong> Our monitoring service includes 99.9% uptime guarantee and rapid incident response commitment.
+                    </div>
+                    
+                    <div class="cta-section mt-5 text-center">
+                        <h4>Secure Your Digital Assets Today</h4>
+                        <p>Start protecting your business with our advanced threat monitoring service.</p>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-shield-alt me-2"></i>Start Monitoring
+                        </a>
+                        <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-cogs me-2"></i>All Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
