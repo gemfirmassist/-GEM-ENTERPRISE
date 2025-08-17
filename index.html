@@ -1,19 +1,371 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
 
-{% block title %}Gem Assist Enterprise - Professional Security & Trust Services{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEM Enterprise - Professional Security & Trust Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #ffd700;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+        }
 
-{% block content %}
+```
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    .navbar {
+        background: rgba(102, 126, 234, 0.95) !important;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+    }
+
+    .navbar-scrolled {
+        background: rgba(102, 126, 234, 1) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: white;
+        padding-top: 80px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 2.5rem;
+        }
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .security-badge {
+        font-size: 4rem;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .stat-item {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .security-dashboard {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .status-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .status-active {
+        background-color: #28a745;
+        box-shadow: 0 0 15px #28a745;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+    }
+
+    .metric {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .metric:last-child {
+        border-bottom: none;
+    }
+
+    /* Services Section */
+    .services-section {
+        background: var(--bg-light);
+        padding: 80px 0;
+    }
+
+    .service-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 20px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        border-color: var(--primary-color);
+    }
+
+    .service-icon {
+        font-size: 3.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.1);
+        color: var(--secondary-color);
+    }
+
+    .service-card h4 {
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+    }
+
+    .service-card p {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 80px 0;
+        background: white;
+    }
+
+    .trust-feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .trust-feature:hover {
+        background: var(--bg-light);
+    }
+
+    .trust-feature i {
+        font-size: 2.5rem;
+        margin-right: 1.5rem;
+        width: 60px;
+    }
+
+    .trust-badges {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .badge-item {
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .badge-item:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Contact Section */
+    .contact-section {
+        background: var(--bg-light);
+        padding: 80px 0;
+    }
+
+    .contact-form {
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        padding: 12px 15px;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    }
+
+    /* Footer */
+    .footer {
+        background: var(--text-dark);
+        color: white;
+    }
+
+    /* Buttons */
+    .btn {
+        border-radius: 50px;
+        padding: 12px 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-outline-primary {
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .btn-outline-primary:hover {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+        border: 2px solid white;
+    }
+
+    .btn-outline-light:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .hero-section {
+            padding-top: 100px;
+            text-align: center;
+        }
+        
+        .trust-badges {
+            justify-content: center;
+        }
+        
+        .badge-item {
+            margin: 0.5rem;
+        }
+        
+        .security-dashboard {
+            margin-top: 2rem;
+        }
+    }
+
+    /* Loading animations */
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 0.6s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-shield-alt me-2"></i>GEM Enterprise
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+```
 <!-- Hero Section -->
-<section class="hero-section">
+<section id="home" class="hero-section">
     <div class="container">
         <div class="row align-items-center min-vh-100">
             <div class="col-lg-6">
-                <div class="hero-content">
+                <div class="hero-content fade-in">
                     <div class="security-badge mb-3">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h1 class="hero-title">
-                        <strong>Professional Security & Trust Services</strong>
+                        Professional Security & Trust Services
                     </h1>
                     <p class="hero-subtitle">
                         GEM Cybersecurity & Monitoring Assist, in partnership with Alliance Trust Realty LLC, provides comprehensive digital threat monitoring, asset recovery, real estate services, and automation solutions.
@@ -41,17 +393,17 @@
                         </div>
                     </div>
                     <div class="hero-actions">
-                        <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg me-3">
+                        <a href="#services" class="btn btn-primary btn-lg me-3">
                             <i class="fas fa-cogs me-2"></i>Our Services
                         </a>
-                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">
+                        <a href="#contact" class="btn btn-outline-light btn-lg">
                             <i class="fas fa-envelope me-2"></i>Get Started
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="hero-visual">
+                <div class="hero-visual fade-in">
                     <div class="security-dashboard">
                         <div class="dashboard-header">
                             <h5><i class="fas fa-desktop me-2"></i>Security Dashboard</h5>
@@ -83,8 +435,8 @@
     </div>
 </section>
 
-<!-- Services Overview -->
-<section class="services-overview py-5">
+<!-- Services Section -->
+<section id="services" class="services-section py-5">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-5">
@@ -94,91 +446,91 @@
         </div>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-shield-virus"></i>
                     </div>
                     <h4>Threat Monitoring</h4>
                     <p>24/7 digital threat detection and response with real-time alerts and comprehensive security analysis.</p>
-                    <a href="{{ url_for('monitoring') }}" class="btn btn-outline-primary">Learn More</a>
+                    <button class="btn btn-outline-primary" onclick="showServiceDetails('monitoring')">Learn More</button>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fab fa-telegram"></i>
                     </div>
                     <h4>Telegram Automation</h4>
                     <p>Advanced bot automation services for secure communication, notifications, and workflow management.</p>
-                    <a href="{{ url_for('telegram_bot') }}" class="btn btn-outline-primary">Learn More</a>
+                    <button class="btn btn-outline-primary" onclick="showServiceDetails('telegram')">Learn More</button>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
                     <h4>Real Estate Services</h4>
                     <p>Professional real estate investment, management, and legal services through Alliance Trust Realty LLC.</p>
-                    <a href="{{ url_for('investment_portfolio') }}" class="btn btn-outline-primary">Learn More</a>
+                    <button class="btn btn-outline-primary" onclick="showServiceDetails('realestate')">Learn More</button>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-gavel"></i>
                     </div>
                     <h4>Legal Services</h4>
                     <p>Power of attorney, legal documentation, and trust management services for secure asset protection.</p>
-                    <a href="{{ url_for('power_of_attorney') }}" class="btn btn-outline-primary">Learn More</a>
+                    <button class="btn btn-outline-primary" onclick="showServiceDetails('legal')">Learn More</button>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h4>Investment Portfolio</h4>
                     <p>Strategic investment management and portfolio optimization with comprehensive risk assessment.</p>
-                    <a href="{{ url_for('investment_portfolio') }}" class="btn btn-outline-primary">Learn More</a>
+                    <button class="btn btn-outline-primary" onclick="showServiceDetails('investment')">Learn More</button>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h4>Partnership Services</h4>
                     <p>Trusted partnerships and trustee services for secure business relationships and asset management.</p>
-                    <a href="{{ url_for('partners') }}" class="btn btn-outline-primary">Learn More</a>
+                    <button class="btn btn-outline-primary" onclick="showServiceDetails('partnership')">Learn More</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Trust Indicators -->
-<section class="trust-section py-5">
+<!-- About Section -->
+<section id="about" class="about-section py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <h3>Why Choose GEM Enterprise?</h3>
                 <div class="trust-features">
-                    <div class="trust-feature">
+                    <div class="trust-feature fade-in">
                         <i class="fas fa-certificate text-warning"></i>
                         <div>
                             <h5>Certified Security</h5>
                             <p>Industry-certified cybersecurity professionals with proven track records</p>
                         </div>
                     </div>
-                    <div class="trust-feature">
+                    <div class="trust-feature fade-in">
                         <i class="fas fa-clock text-info"></i>
                         <div>
                             <h5>24/7 Response</h5>
                             <p>Round-the-clock monitoring and rapid response to security incidents</p>
                         </div>
                     </div>
-                    <div class="trust-feature">
+                    <div class="trust-feature fade-in">
                         <i class="fas fa-lock text-success"></i>
                         <div>
                             <h5>Data Protection</h5>
@@ -189,15 +541,15 @@
             </div>
             <div class="col-lg-6">
                 <div class="trust-badges">
-                    <div class="badge-item">
+                    <div class="badge-item fade-in">
                         <i class="fas fa-award fa-3x text-warning"></i>
                         <h6>Security Excellence</h6>
                     </div>
-                    <div class="badge-item">
+                    <div class="badge-item fade-in">
                         <i class="fas fa-star fa-3x text-primary"></i>
                         <h6>5-Star Service</h6>
                     </div>
-                    <div class="badge-item">
+                    <div class="badge-item fade-in">
                         <i class="fas fa-shield-check fa-3x text-success"></i>
                         <h6>Verified Secure</h6>
                     </div>
@@ -206,4 +558,231 @@
         </div>
     </div>
 </section>
-{% endblock %}
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2>Get Started Today</h2>
+                <p class="lead">Contact us for a free consultation</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 GEM Enterprise. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Service Modal -->
+<div class="modal fade" id="serviceModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="serviceModalTitle">Service Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="serviceModalBody"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="scrollToContact()">Contact Us</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeApp();
+        triggerAnimations();
+    });
+
+    function initializeApp() {
+        initNavbarScroll();
+        initSmoothScroll();
+        initContactForm();
+        initServiceModals();
+    }
+
+    // Navbar scroll effect
+    function initNavbarScroll() {
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    }
+
+    // Smooth scrolling
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    }
+
+    // Contact form
+    function initContactForm() {
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                handleContactSubmission(this);
+            });
+        }
+    }
+
+    function handleContactSubmission(form) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+            form.reset();
+            showNotification('Thank you! Your message has been sent successfully.', 'success');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    }
+
+    // Service modals
+    function initServiceModals() {
+        const serviceData = {
+            monitoring: {
+                title: 'Threat Monitoring Services',
+                content: `
+                    <h5>24/7 Digital Threat Detection</h5>
+                    <p>Our comprehensive monitoring services include:</p>
+                    <ul>
+                        <li><i class="fas fa-check text-success me-2"></i>Real-time threat detection and analysis</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Automated incident response protocols</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Advanced malware protection</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Network security monitoring</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Vulnerability assessments</li>
+                    </ul>
+                    <p>Get complete visibility into your digital infrastructure with our state-of-the-art monitoring solutions.</p>
+                `
+            },
+            telegram: {
+                title: 'Telegram Automation Services',
+                content: `
+                    <h5>Advanced Bot Automation</h5>
+                    <p>Streamline your communication with our Telegram solutions:</p>
+                    <ul>
+                        <li><i class="fas fa-check text-success me-2"></i>Custom bot development</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Automated notifications and alerts</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Workflow automation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Secure messaging protocols</li>
+                        <li><i class="fas fa-check text-success me-2"></i>API integrations</li>
+                    </ul>
+                    <p>Enhance your team's productivity with intelligent automation solutions.</p>
+                `
+            },
+            realestate: {
+                title: 'Real Estate Investment Services',
+                content: `
+                    <h5>Professional Property Management</h5>
+                    <p>Through our partnership with Alliance Trust Realty LLC:</p>
+                    <ul>
+                        <li><i class="fas fa-check text-success me-2"></i>Investment property acquisition</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Property management services</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Market analysis and consulting</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Legal documentation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Portfolio optimization</li>
+                    </ul>
+                    <p>Build and manage your real estate portfolio with expert guidance and professional support.</p>
+                `
+            },
+            legal: {
+                title: 'Legal and Trust Services',
+                content: `
+                    <h5>Comprehensive Legal Support</h5>
+                    <p>Professional legal services including:</p>
+                    <ul>
+                        <li><i class="fas fa-check text-success me-2"></i>Power of attorney documentation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Trust establishment and management</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Asset protection strategies</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Legal consultation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Contract review and drafting</li>
+                    </ul>
+                    <p>Protect your assets and interests with professional legal guidance and trusted documentation services.</p>
+                `
+            },
+            investment: {
+                title: 'Investment Portfolio Management',
+                content: `
+                    <h5>Strategic Investment Solutions</h5>
+                    <p>Optimize your investments with our professional services:</p>
+                    <ul>
+                        <li><i class="fas fa-check text-success me-2"></i>Portfolio analysis and optimization</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Risk assessment and management</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Investment strategy development</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Market research and insights</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Performance monitoring</li>
+                    </ul>
+                    <p>Achieve your financial goals with data-driven investment strategies and professional portfolio management.</p>
+                `
+            },
+            partnership: {
+                title: 'Partnership and Trustee Services',
+                content: `
+                    <h5>Trusted Business Relationships</h5>
+                    <p>Build secure partnerships with our comprehensive services:</p>
+                    <ul>
+```
